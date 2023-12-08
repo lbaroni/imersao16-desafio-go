@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  sort:
+    build: .
+    ports:
+    - "50051:50051"
+    volumes:
+      - .:/go/src/
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
